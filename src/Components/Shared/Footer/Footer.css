@@ -20,9 +20,15 @@
     
 }
 
-.icons{
+.icons a{
     font-size: 40px;
     color: aliceblue;
+    
+}
+
+.icons a:hover{
+    font-size: 40px;
+    color: blueviolet;
     
 }
 

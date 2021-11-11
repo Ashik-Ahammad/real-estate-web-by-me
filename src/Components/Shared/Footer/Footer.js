@@ -2,10 +2,13 @@ import { Button, Grid, TextField, Typography } from '@mui/material';
 import React from 'react';
 import './Footer.css';
 import footerImg from '../../../images/foot.jpg'
+import SendIcon from '@mui/icons-material/Send';
+
 
 
 const footerBg = {
     background: `url(${footerImg})`
+
 }
 
 const Footer = () => {
@@ -36,6 +39,9 @@ const Footer = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={6} >
+                        <Typography>
+                            FEEDBACK
+                        </Typography>
                         <form >
                             <TextField
                                 sx={{ mx: 1, width: '30%', color: 'primary.main' }}
@@ -72,19 +78,22 @@ const Footer = () => {
                                 multiline
                                 rows={4}
                             />
-                            <Button sx={{ width: '62%', m: 1, color: 'white', background: "transparent" }} type="submit" variant="contained" >
+                            <Button sx={{ width: '62%', m: 1, color: 'white', background: "transparent" }} type="submit" variant="contained" endIcon={<SendIcon />}>
                                 SEND
                             </Button>
                         </form>
                         <Grid item xs>
                             <div class="icons">
-                                <i class="fab fa-facebook-square"></i>
+                                <a href="www.facebook.com"
+                                    target="_blank"
+                                ><i class="fab fa-facebook-square"></i></a>
                                 &nbsp;
-                                <i class="fab fa-twitter-square"></i>
+                                <a href="www.twitter.com" target="_blank"
+                                ><i class="fab fa-twitter-square"></i></a>
                                 &nbsp;
-                                <i class="fab fa-linkedin"></i>
+                                <a href="www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
                                 &nbsp;
-                                <i class="fab fa-youtube-square"></i>
+                                <a href="www.youtube.com" target="_blank"><i class="fab fa-youtube-square"></i></a>
                             </div>
                         </Grid>
 

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import './Banner.css';
 import banner from '../../../images/banner.jpg'
+import { NavLink } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <Grid container spacing={2} sx={{ mt: 5 }}>
+        <Grid container spacing={2} sx={{ mt: 5, py: 10 }}>
             <Grid item sx={{ mt: 1 }} xs={12} md={6}>
                 <div>
                     <h1 >
@@ -31,6 +32,9 @@ const Banner = () => {
 
             <Grid item xs={12} md={6}>
                 <img style={{ width: '90%' }} src={banner} alt="Banner" />
+                <NavLink to="/allProducts">
+                    <Button color="secondary" >EXPLORE MORE</Button>
+                </NavLink>
             </Grid>
         </Grid>
     );

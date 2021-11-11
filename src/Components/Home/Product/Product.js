@@ -5,12 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
+import './Product.css'
 
 const Product = (props) => {
     const { name, description, img, address } = props.product;
     return (
         <Grid item xs={4} sm={4} md={4}>
-            <Card sx={{ minWidth: 275, p: 2, boxShadow: 3 }}>
+            <Card sx={{ minWidth: 275, p: 2, boxShadow: 3 }}  >
                 <CardMedia
                     component="img"
                     height="140"

@@ -58,11 +58,9 @@ const Products = () => {
         <div>
             <Box sx={{ flexGrow: 1 }}>
                 <Container>
-                    <Typography sx={{ fontWeight: 600, m: 2, color: '#80deea' }} variant="h6" component="div">
-                        Products
-                    </Typography>
+
                     <Typography sx={{ fontWeight: 600, m: 3 }} variant="h4" component="div">
-                        Rent Apartment
+                        RENT APARTMENT
                     </Typography>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {

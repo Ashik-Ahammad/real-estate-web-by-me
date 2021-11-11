@@ -5,7 +5,10 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
-import Footer from './Components/Shared/Footer/Footer';
+
+import AllProducts from './Components/AllProducts/AllProducts';
+import Login from './Components/LOG IN/Login/Login';
+import Register from './Components/LOG IN/Register/Register';
 
 function App() {
   return (
@@ -18,8 +21,16 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
+          <Route exact path="/allProducts">
+            <AllProducts></AllProducts>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/register">
+            <Register></Register>
+          </Route>
         </Switch>
-        <Footer></Footer>
       </Router>
     </div>
   );
