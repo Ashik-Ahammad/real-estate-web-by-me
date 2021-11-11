@@ -55,6 +55,13 @@ const Register = () => {
                         <Button sx={{ width: '62%', m: 1 }} type="submit" variant="contained">
                             SIGN UP
                         </Button>
+
+                        <Typography>
+                            OR
+                        </Typography>
+                        <Button sx={{ width: '62%', m: 1, color: 'navy', background: "white" }} type="submit" variant="contained" >
+                            <i class="fab fa-google"></i>&nbsp;  SIGN UP WITH GOOGLE
+                        </Button>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/login">

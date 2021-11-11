@@ -6,37 +6,51 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
 import './Product.css'
+import ProductModal from '../../ProductModal/ProductModal';
 
-const Product = (props) => {
-    const { name, description, img, address } = props.product;
+const Product = ({ product }) => {
+    const { name, description, img, address } = product;
+
+    const [openProduct, setOpenProduct] = React.useState(false);
+    const handleProductOpen = () => setOpenProduct(true);
+    const handleProductClose = () => setOpenProduct(false);
+
     return (
-        <Grid item xs={4} sm={4} md={4}>
-            <Card sx={{ minWidth: 275, p: 2, boxShadow: 3 }}  >
-                <CardMedia
-                    component="img"
-                    height="140"
-                    sx={{ borderRadius: 1 }}
-                    style={{ width: 'auto', height: '80px', margin: '0 auto' }}
-                    image={img}
-                    alt=""
-                />
-                <CardContent>
-                    <Typography variant="h5" component="div">
-                        {name}
-                    </Typography>
-                    <Typography variant="h6" sx={{ color: 'info.main' }} component="div">
-                        {address}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description}
-                    </Typography>
-                    <Button sx={{ mt: 2 }} variant="contained">View for Details</Button>
+        <>
+            <Grid item xs={4} sm={4} md={4}>
+                <Card sx={{ minWidth: 275, p: 2, boxShadow: 3 }}  >
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        sx={{ borderRadius: 1 }}
+                        style={{ width: 'auto', height: '80px', margin: '0 auto' }}
+                        image={img}
+                        alt=""
+                    />
+                    <CardContent>
+                        <Typography variant="h5" component="div">
+                            {name}
+                        </Typography>
+                        <Typography variant="h6" sx={{ color: 'info.main' }} component="div">
+                            {address}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {description}
+                        </Typography>
+                        <Button onClick={handleProductOpen} sx={{ mt: 2 }} variant="contained">View for Details</Button>
 
 
-                </CardContent>
+                    </CardContent>
 
-            </Card>
-        </Grid >
+                </Card>
+            </Grid >
+            <ProductModal
+                product={product}
+                openProduct={openProduct}
+                handleProductClose={handleProductClose}
+            >
+            </ProductModal>
+        </>
     );
 };
 

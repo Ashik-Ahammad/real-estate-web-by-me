@@ -21,7 +21,7 @@ const Login = () => {
                     </Typography>
 
                     <Button sx={{ width: '62%', m: 1, color: 'navy', background: "white" }} type="submit" variant="contained" >
-                        SIGN IN WITH GOOGLE
+                        <i class="fab fa-google"></i>&nbsp;  SIGN IN WITH GOOGLE
                     </Button>
 
                     <Typography sx={{ color: 'navy' }}>OR</Typography>
