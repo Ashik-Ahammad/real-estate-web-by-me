@@ -1,0 +1,28 @@
+.footer-style{
+    margin-top: 50px;
+}
+
+.footer-para{
+ color: white;   
+}
+
+.add-phn-em-style{
+    margin: 10px;
+    background-color: rgba(175, 238, 238, 0.233);
+}
+
+.icon-style{
+    background-color: #008080;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    margin-top: 10px;
+    
+}
+
+.icons{
+    font-size: 40px;
+    color: aliceblue;
+    
+}
+
