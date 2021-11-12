@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
 
 const style = {
     position: 'absolute',
@@ -44,7 +45,9 @@ const AllProductModal = ({ openAllProduct, handleAllProductClose, allProduct }) 
                     <Typography id="transition-modal-description" sx={{ mt: 2 }}>
                         Buy Apartment
                     </Typography>
-                    <Button color="secondary">GET IT NOW</Button>
+                    <NavLink to="/purchase" style={{ textDecoration: 'none' }}>
+                        <Button color="secondary">PURCHASE NOW</Button>
+                    </NavLink>
                 </Box>
             </Fade>
         </Modal>

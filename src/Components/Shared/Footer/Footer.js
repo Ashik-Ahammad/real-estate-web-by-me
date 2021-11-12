@@ -42,12 +42,13 @@ const Footer = () => {
                         <Typography>
                             FEEDBACK
                         </Typography>
-                        <form >
+                        <form onSubmit="">
                             <TextField
                                 sx={{ mx: 1, width: '30%', color: 'primary.main' }}
                                 id="outlined-multiline-flexible"
                                 label="Name"
                                 name="name"
+                                type="text"
                                 multiline
                                 required
                                 maxRows={4}
@@ -57,6 +58,7 @@ const Footer = () => {
                                 id="outlined-multiline-flexible"
                                 label="Email"
                                 name="email"
+                                type="email"
                                 multiline
                                 required
                                 maxRows={4}
@@ -66,6 +68,7 @@ const Footer = () => {
                                 sx={{ width: '62%', m: 1 }}
                                 id="outlined-multiline-flexible"
                                 label="Subject"
+                                type="text"
                                 multiline
                                 maxRows={4}
                             />
@@ -75,6 +78,7 @@ const Footer = () => {
                                 sx={{ mx: 1, width: '62%' }}
                                 id="outlined-multiline-static"
                                 label="Message"
+                                type="text"
                                 multiline
                                 rows={4}
                             />

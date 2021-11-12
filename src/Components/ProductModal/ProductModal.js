@@ -5,6 +5,9 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import { TextField } from '@mui/material';
 
 const style = {
     position: 'absolute',
@@ -12,8 +15,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
+    bgcolor: 'lightblue',
     boxShadow: 24,
     p: 4,
 };
@@ -21,7 +23,8 @@ const style = {
 
 const ProductModal = ({ openProduct, handleProductClose, product }) => {
 
-    const { name, address } = product;
+    const { name, address, description, price, details } = product;
+    const { user } = useAuth();
 
     return (
         <Modal
@@ -35,17 +38,31 @@ const ProductModal = ({ openProduct, handleProductClose, product }) => {
                 timeout: 500,
             }}
         >
-            <Fade in={openProduct}>
-                <Box sx={style}>
+            <Fade in={openProduct} >
+                <Box sx={style} >
                     <Typography id="transition-modal-title" variant="h6" component="h2">
+
                         {name}
                         <br />
-                        {address}
+                        <span style={{ color: 'indigo' }}>{address}</span>
+                        <br />
+                        <h6 style={{ color: 'gray' }}>"{description}"</h6>
+                        <br />
+                        {details}
+                        <br />
+                        <span style={{ color: 'red' }}>{price}</span>
                     </Typography>
-                    <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                        Buy Apartment
-                    </Typography>
-                    <Button color="secondary">GET IT NOW</Button>
+                    <TextField
+                        sx={{ width: '75%' }}
+                        id="outlined-read-only-input"
+                        defaultValue={user.email}
+                        InputProps={{
+                            readOnly: true,
+                        }}
+                    />
+                    <NavLink style={{ textDecoration: 'none' }} to="/purchase">
+                        <Button color="secondary">PURCHA$E NOW</Button>
+                    </NavLink>
                 </Box>
             </Fade>
         </Modal>

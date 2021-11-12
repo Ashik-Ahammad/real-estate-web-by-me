@@ -9,7 +9,7 @@ import './Product.css'
 import ProductModal from '../../ProductModal/ProductModal';
 
 const Product = ({ product }) => {
-    const { name, description, img, address } = product;
+    const { name, details, img, address } = product;
 
     const [openProduct, setOpenProduct] = React.useState(false);
     const handleProductOpen = () => setOpenProduct(true);
@@ -35,7 +35,7 @@ const Product = ({ product }) => {
                             {address}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            {description}
+                            {details}
                         </Typography>
                         <Button onClick={handleProductOpen} sx={{ mt: 2 }} variant="contained">View for Details</Button>
 
