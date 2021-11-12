@@ -32,7 +32,7 @@ const Banner = () => {
 
             <Grid item xs={12} md={6}>
                 <img style={{ width: '90%' }} src={banner} alt="Banner" />
-                <NavLink to="/allProducts">
+                <NavLink style={{ textDecoration: 'none' }} to="/allProducts">
                     <Button color="secondary" >EXPLORE MORE</Button>
                 </NavLink>
             </Grid>

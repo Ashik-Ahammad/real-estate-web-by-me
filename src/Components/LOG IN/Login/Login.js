@@ -1,8 +1,9 @@
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
-import React from 'react';
+import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react';
 import './Login.css'
 import { NavLink } from 'react-router-dom';
 import loginImg from '../../../images/login.jpg';
+import useAuth from '../../../Hooks/useAuth';
 
 
 
@@ -12,6 +13,24 @@ const loginBg = {
 
 
 const Login = () => {
+    const [loginData, setLoginData] = useState({});
+    const { user, loginUser, isLoading, authError } = useAuth();
+
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData);
+    }
+
+    const handleLoginSibmit = e => {
+
+        loginUser(loginData.email, loginData.password);
+        e.preventDefault();
+    }
+
     return (
         <Container style={loginBg}>
             <Grid container spacing={2} sx={{ py: 25 }}>
@@ -26,13 +45,13 @@ const Login = () => {
 
                     <Typography sx={{ color: 'navy' }}>OR</Typography>
 
-                    <form >
+                    <form onSubmit={handleLoginSibmit}>
 
                         <TextField
                             sx={{ width: '62%', m: 1 }}
                             id="standard-basic" label="Email"
                             name="email"
-
+                            onChange={handleOnChange}
                             required
                             variant="standard" />
                         <br />
@@ -42,7 +61,7 @@ const Login = () => {
                             label="Password"
                             type="password"
                             name="password"
-
+                            onChange={handleOnChange}
                             autoComplete="current-password"
                             variant="standard"
                             required
@@ -57,6 +76,10 @@ const Login = () => {
                             to="/register">
                             <Button sx={{ color: 'navy' }} variant="text">New user? Please Register</Button>
                         </NavLink>
+                        {isLoading && <CircularProgress />
+                        }{user?.email && <Alert severity="success">Congrats Successfully Log in</Alert>}
+                        {authError && <Alert severity="error">{authError}</Alert>
+                        }
                     </form>
                 </Grid>
 

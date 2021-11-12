@@ -18,24 +18,23 @@ const style = {
     p: 4,
 };
 
+const AllProductModal = ({ openAllProduct, handleAllProductClose, allProduct }) => {
 
-const ProductModal = ({ openProduct, handleProductClose, product }) => {
-
-    const { name, address } = product;
+    const { name, address } = allProduct;
 
     return (
         <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
-            open={openProduct}
-            onClose={handleProductClose}
+            open={openAllProduct}
+            onClose={handleAllProductClose}
             closeAfterTransition
             BackdropComponent={Backdrop}
             BackdropProps={{
                 timeout: 500,
             }}
         >
-            <Fade in={openProduct}>
+            <Fade in={openAllProduct}>
                 <Box sx={style}>
                     <Typography id="transition-modal-title" variant="h6" component="h2">
                         {name}
@@ -52,4 +51,4 @@ const ProductModal = ({ openProduct, handleProductClose, product }) => {
     );
 };
 
-export default ProductModal;
+export default AllProductModal;
