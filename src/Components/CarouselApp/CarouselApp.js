@@ -127,8 +127,7 @@ function CarouselApp() {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} md={6} sm={12} >
-
-                <Box sx={{ maxWidth: 400, flexGrow: 1 }} style={{ marginLeft: '190px' }}>
+                <Box sx={{ maxWidth: 400, flexGrow: 1 }} style={{ padding: '05px' }}>
                     <Paper
                         square
                         elevation={0}

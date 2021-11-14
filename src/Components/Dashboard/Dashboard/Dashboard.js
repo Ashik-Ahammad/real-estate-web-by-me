@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
+import logoD from '../../../images/logo.png'
 
 import {
     Switch,
@@ -38,7 +39,9 @@ function Dashboard(props) {
 
     const drawer = (
         <div>
-            <Toolbar />
+            <Toolbar >
+                <img style={{ width: '150px', background: 'lightgray' }} src={logoD} alt="" />
+            </Toolbar>
             <Divider />
             <Link style={{ textDecoration: 'none', color: 'black' }} to="/home"><Button color="inherit">GO HOME</Button></Link>
 
@@ -116,8 +119,7 @@ function Dashboard(props) {
             </Box>
             <Box
                 component="main"
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-            >
+                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
                 <Toolbar />
                 <Switch>
                     <Route exact path={path}>

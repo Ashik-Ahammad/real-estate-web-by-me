@@ -4,24 +4,21 @@ import './ReviewPost.css'
 const ReviewPost = () => {
 
     const handleReviewSubmit = e => {
-        // const bookingAp = {
-        //     ...bookingInfo,
-        //     apartmentName: name,
-        // }
+
 
         // fetch('https://pacific-basin-32376.herokuapp.com/reviews', {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application.json'
         //     },
-        //     body: JSON.stringify(bookingAp)
+        //     body: JSON.stringify()
         // })
         //     .then(res => res.json())
         //     .then(data => {
         //         if (data.insertedId) {
 
 
-        //             handleProductClose();
+        //           
         //         }
         //     })
 
