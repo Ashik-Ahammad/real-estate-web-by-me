@@ -10,6 +10,7 @@ import Login from './Components/LOG IN/Login/Login';
 import Register from './Components/LOG IN/Register/Register';
 import AuthProvider from './Contexts/AuthProvider';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
+import NotFound from './Components/NotFound/NotFound';
 
 
 function App() {
@@ -36,7 +37,9 @@ function App() {
             <Route path="/dashboard">
               <Dashboard></Dashboard>
             </Route>
-
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </Router>
       </AuthProvider>
