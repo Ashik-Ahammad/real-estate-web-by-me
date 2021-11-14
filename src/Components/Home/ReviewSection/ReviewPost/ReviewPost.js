@@ -9,7 +9,7 @@ const ReviewPost = () => {
         //     apartmentName: name,
         // }
 
-        // fetch('https://pacific-basin-32376.herokuapp.com/purchaseList', {
+        // fetch('https://pacific-basin-32376.herokuapp.com/reviews', {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application.json'

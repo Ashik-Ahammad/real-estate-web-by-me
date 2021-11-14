@@ -47,45 +47,36 @@ const Register = () => {
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-basic" label="Name"
+                            id="standard-basic"
+                            label="Your Name"
                             name="name"
-                            type="text"
                             onBlur={handleOnBlur}
-                            required
                             variant="standard" />
-                        <br />
-
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-basic" label="Email"
+                            id="standard-basic"
+                            label="Your Email"
                             name="email"
                             type="email"
                             onBlur={handleOnBlur}
-                            required
                             variant="standard" />
-                        <br />
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-password-input"
-                            label="Password"
+                            id="standard-basic"
+                            label="Your Password"
                             type="password"
                             name="password"
                             onBlur={handleOnBlur}
-                            autoComplete="current-password"
-                            variant="standard"
-                            required
-                        />
+                            variant="standard" />
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-password-input"
-                            label="Retype-password"
+                            id="standard-basic"
+                            label="ReType Your Password"
                             type="password"
                             name="password2"
                             onBlur={handleOnBlur}
-                            autoComplete="current-password"
-                            variant="standard"
-                            required
-                        />
+                            variant="standard" />
+
 
                         <Button sx={{ width: '62%', m: 1 }} type="submit" variant="contained">
                             SIGN UP
@@ -99,8 +90,7 @@ const Register = () => {
                     </form>}
                     {isLoading && <CircularProgress />
                     }{user?.email && <Alert severity="success">Congrats Successfully Registered</Alert>}
-                    {authError && <Alert severity="error">{authError}</Alert>
-                    }
+                    {authError && <Alert severity="error">{authError}</Alert>}
                 </Grid>
 
                 <Grid item xs={12} md={6}>
