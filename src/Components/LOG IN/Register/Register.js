@@ -47,14 +47,14 @@ const Register = () => {
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-basic"
+
                             label="Your Name"
                             name="name"
                             onBlur={handleOnBlur}
                             variant="standard" />
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-basic"
+
                             label="Your Email"
                             name="email"
                             type="email"
@@ -62,7 +62,7 @@ const Register = () => {
                             variant="standard" />
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-basic"
+
                             label="Your Password"
                             type="password"
                             name="password"
@@ -70,7 +70,7 @@ const Register = () => {
                             variant="standard" />
                         <TextField
                             sx={{ width: '62%', m: 1 }}
-                            id="standard-basic"
+
                             label="ReType Your Password"
                             type="password"
                             name="password2"

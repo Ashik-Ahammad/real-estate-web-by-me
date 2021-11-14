@@ -6,23 +6,31 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
-import ReviewPost from '../../Home/ReviewSection/ReviewPost/ReviewPost';
-import Bookings from '../Bookings/Bookings';
+import { Button } from '@mui/material';
+
+import {
+    Switch,
+    Route,
+    Link,
+    useRouteMatch
+} from "react-router-dom";
+
+import DashboardHome from '../DashboardHome/DashboardHome';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import AddApartment from '../AddApartment/AddApartment';
+import useAuth from '../../../Hooks/useAuth';
+import AdminRoute from '../../LOG IN/AdminRoute/AdminRoute';
 
 const drawerWidth = 200;
 
 function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    let { path, url } = useRouteMatch();
+    const { admin } = useAuth();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -32,14 +40,17 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
+            <Link style={{ textDecoration: 'none', color: 'black' }} to="/home"><Button color="inherit">GO HOME</Button></Link>
 
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+            <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}`}><Button color="inherit">DASHBOARD HOME</Button></Link>
+
+            {admin && <Box>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+
+                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/addApartment`}><Button color="inherit">Add Apartment</Button></Link>
+            </Box>}
+
+
 
         </div>
     );
@@ -67,7 +78,7 @@ function Dashboard(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        united PROPERTY
+                        <span style={{ color: 'blue' }}>united PROPERTY </span> &nbsp; DASHBOARD
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -108,17 +119,17 @@ function Dashboard(props) {
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar />
-                <Typography paragraph>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} md={6} sm={12}>
-                            <ReviewPost></ReviewPost>
-                        </Grid>
-
-                        <Grid item xs={12} md={6} sm={12}>
-                            <Bookings></Bookings>
-                        </Grid>
-                    </Grid>
-                </Typography>
+                <Switch>
+                    <Route exact path={path}>
+                        <DashboardHome></DashboardHome>
+                    </Route>
+                    <AdminRoute path={`${path}/makeAdmin`}>
+                        <MakeAdmin></MakeAdmin>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/addApartment`}>
+                        <AddApartment></AddApartment>
+                    </AdminRoute>
+                </Switch>
 
             </Box>
         </Box>

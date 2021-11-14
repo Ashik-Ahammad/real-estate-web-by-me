@@ -52,19 +52,14 @@ const ReviewPost = () => {
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input name="email" type="email" class="form-control" placeholder="john.doe@yahoo.com" />
+                            <input name="email" type="email" class="form-control"
+
+                            />
                         </div>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                            <input name="URL" placeholder="https://google.com" class="form-control" type="url" />
-                        </div>
-                    </div>
-                </div>
+
 
                 <div class="pinfo">Rate our overall services.</div>
 
