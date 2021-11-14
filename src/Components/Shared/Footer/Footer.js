@@ -12,6 +12,12 @@ const footerBg = {
 }
 
 const Footer = () => {
+
+    const handleFeedbackSubmit = e => {
+        alert('Feedback sent.');
+        e.preventDefault();
+    }
+
     return (
         <div>
             <footer class="footer-style" >
@@ -42,7 +48,7 @@ const Footer = () => {
                         <Typography>
                             FEEDBACK
                         </Typography>
-                        <form onSubmit="">
+                        <form onSubmit={handleFeedbackSubmit}>
                             <TextField
                                 sx={{ mx: 1, width: '30%', color: 'primary.main' }}
                                 id="outlined-multiline-flexible"

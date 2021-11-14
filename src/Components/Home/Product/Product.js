@@ -8,7 +8,7 @@ import { Button } from '@mui/material';
 import './Product.css'
 import ProductModal from '../../ProductModal/ProductModal';
 
-const Product = ({ product }) => {
+const Product = ({ product, setBookingSuccess }) => {
     const { name, details, img, address } = product;
 
     const [openProduct, setOpenProduct] = React.useState(false);
@@ -48,6 +48,7 @@ const Product = ({ product }) => {
                 product={product}
                 openProduct={openProduct}
                 handleProductClose={handleProductClose}
+                setBookingSuccess={setBookingSuccess}
             >
             </ProductModal>
         </>

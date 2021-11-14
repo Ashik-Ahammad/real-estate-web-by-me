@@ -5,13 +5,12 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
-
 import AllProducts from './Components/AllProducts/AllProducts';
 import Login from './Components/LOG IN/Login/Login';
 import Register from './Components/LOG IN/Register/Register';
 import AuthProvider from './Contexts/AuthProvider';
-import Purchase from './Components/Purchase/Purchase';
-import PrivateRoute from './Components/LOG IN/PrivateRoute/PrivateRoute';
+import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
+
 
 function App() {
   return (
@@ -19,24 +18,25 @@ function App() {
       <AuthProvider>
         <Router>
           <Switch>
-            <Route exact path="/home">
+            <Route path="/home">
               <Home></Home>
             </Route>
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route exact path="/allProducts">
+            <Route path="/allProducts">
               <AllProducts></AllProducts>
             </Route>
-            <PrivateRoute exact path="/purchase">
-              <Purchase></Purchase>
-            </PrivateRoute>
-            <Route exact path="/login">
+            <Route path="/login">
               <Login></Login>
             </Route>
-            <Route exact path="/register">
+            <Route path="/register">
               <Register></Register>
             </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
+            </Route>
+
           </Switch>
         </Router>
       </AuthProvider>

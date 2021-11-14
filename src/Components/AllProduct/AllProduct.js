@@ -2,7 +2,7 @@ import { Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/mat
 import React from 'react';
 import AllProductModal from '../AllProductModal/AllProductModal';
 
-const AllProduct = ({ allProduct }) => {
+const AllProduct = ({ allProduct, setBookingSuccess }) => {
 
     const { name, description, img, address } = allProduct;
 
@@ -42,6 +42,7 @@ const AllProduct = ({ allProduct }) => {
                 allProduct={allProduct}
                 openAllProduct={openAllProduct}
                 handleAllProductClose={handleAllProductClose}
+                setBookingSuccess={setBookingSuccess}
             ></AllProductModal>
         </>
     );

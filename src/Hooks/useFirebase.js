@@ -22,6 +22,8 @@ const useFirebase = () => {
                 setAuthError('');
                 const newUser = { email, displayName: name }
                 setUser(newUser)
+                // save user
+                saveUser(email, name)
 
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -94,6 +96,18 @@ const useFirebase = () => {
         })
             .finally(() => setIsLoading(false))
 
+    }
+
+    const saveUser = (email, displayName) => {
+        const user = { email, displayName };
+        fetch('https://pacific-basin-32376.herokuapp.com/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
     }
 
     return {
