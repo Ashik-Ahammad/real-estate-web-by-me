@@ -4,7 +4,7 @@ import React from 'react';
 const Review = ({ review }) => {
     const { name, email, details, rating } = review;
     return (
-        <div className="container">
+        <div >
             <Grid item xs={6} sm={6} md={8} style={{ marginLeft: '10px' }}>
                 <Paper elevation={0} style={{ background: 'transparent' }} >
                     <Typography sx={{ color: 'navy' }}>

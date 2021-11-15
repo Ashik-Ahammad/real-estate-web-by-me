@@ -15,7 +15,7 @@ const CarouselApp = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Apartment</h3>
+                        <h3>Apartment Sea View</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -26,7 +26,7 @@ const CarouselApp = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3>Apartment</h3>
+                        <h3>Apartment Blu Vivid</h3>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -38,7 +38,8 @@ const CarouselApp = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Apartment</h3>
+                        <h3>Apartment Ignito
+                        </h3>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -49,7 +50,7 @@ const CarouselApp = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Apartment</h3>
+                        <h3>Apartment Black Moon</h3>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -60,7 +61,7 @@ const CarouselApp = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Apartment</h3>
+                        <h3>Apartment Peninsula</h3>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -71,7 +72,7 @@ const CarouselApp = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Apartment</h3>
+                        <h3>Apartment Blissview</h3>
 
                     </Carousel.Caption>
                 </Carousel.Item>

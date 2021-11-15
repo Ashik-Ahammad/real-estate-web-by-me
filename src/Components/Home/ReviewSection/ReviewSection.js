@@ -1,8 +1,10 @@
-import { Grid } from '@mui/material';
+import { Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import './ReviewSection.css'
-import logoF from '../../../images/logo.png';
 import Review from './Review/Review';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 
 const ReviewSection = () => {
@@ -17,20 +19,24 @@ const ReviewSection = () => {
 
 
     return (
-        <div class="reviewS">
+        <Box sx={{ flexGrow: 1 }} class="reviewS">
 
-            <h4>Reviews</h4>
+            <Container>
 
-            <Grid container columns={{ xs: 4, sm: 8, md: 12 }}>
-                {
-                    reviews.map(review => <Review
-                        key={review._id}
-                        review={review}
-                    ></Review>)
-                }
-            </Grid>
+                <Typography sx={{ fontWeight: 600, m: 3 }} variant="h5" component="div">
+                    REVIEWS
+                </Typography>
 
-        </div>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    {
+                        reviews.map(review => <Review
+                            key={review._id}
+                            review={review}
+                        ></Review>)
+                    }
+                </Grid>
+            </Container>
+        </Box>
     );
 };
 
