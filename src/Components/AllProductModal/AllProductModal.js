@@ -104,7 +104,9 @@ const AllProductModal = ({ openAllProduct, handleAllProductClose, allProduct, se
                             name="email"
                             onBlur={handleOnBlur}
                             defaultValue={user.email}
+                            placeholder="Email"
                             size="small"
+                            required
                         />
 
                         <TextField
@@ -112,9 +114,9 @@ const AllProductModal = ({ openAllProduct, handleAllProductClose, allProduct, se
                             id="outlined-size-small"
                             name="phone"
                             onBlur={handleOnBlur}
-                            defaultValue="+880"
                             placeholder="Phone Number"
                             size="small"
+                            required
                         />
 
                         <TextField

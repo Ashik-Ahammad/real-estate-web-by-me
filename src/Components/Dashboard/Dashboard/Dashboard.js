@@ -38,19 +38,19 @@ function Dashboard(props) {
     };
 
     const drawer = (
-        <div>
-            <Toolbar >
+        <div >
+            <Toolbar style={{ background: '#212121' }}>
                 <img style={{ width: '150px', background: 'lightgray' }} src={logoD} alt="" />
             </Toolbar>
             <Divider />
-            <Link style={{ textDecoration: 'none', color: 'black' }} to="/home"><Button color="inherit">GO HOME</Button></Link>
+            <Link style={{ textDecoration: 'none', color: 'black', width: '100%' }} to="/home"><Button color="inherit">GO BACK HOME</Button></Link>
 
             <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}`}><Button color="inherit">DASHBOARD HOME</Button></Link>
 
             {admin && <Box>
-                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeAdmin`}><Button color="inherit">MAKE AN ADMIN</Button></Link>
 
-                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/addApartment`}><Button color="inherit">Add Apartment</Button></Link>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/addApartment`}><Button color="inherit">ADD APARTMENT</Button></Link>
             </Box>}
 
 
@@ -66,6 +66,7 @@ function Dashboard(props) {
             <AppBar
                 position="fixed"
                 sx={{
+                    background: '#212121',
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
                 }}
@@ -81,7 +82,7 @@ function Dashboard(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        <span style={{ color: 'blue' }}>united PROPERTY </span> &nbsp; DASHBOARD
+                        D A S H B O A R D
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -134,7 +135,7 @@ function Dashboard(props) {
                 </Switch>
 
             </Box>
-        </Box>
+        </Box >
     );
 }
 

@@ -37,7 +37,7 @@ const Product = ({ product, setBookingSuccess }) => {
                         <Typography variant="body2" color="text.secondary">
                             {details}
                         </Typography>
-                        <Button onClick={handleProductOpen} sx={{ mt: 2 }} variant="contained">View for Details</Button>
+                        <Button style={{ background: '#212121' }} onClick={handleProductOpen} sx={{ mt: 2 }} variant="contained">View for Details</Button>
 
 
                     </CardContent>

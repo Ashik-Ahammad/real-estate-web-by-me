@@ -28,10 +28,9 @@ const Bookings = () => {
                     <TableHead>
                         <TableRow>
                             <TableCell>Name</TableCell>
-                            <TableCell align="right">Apartment Name</TableCell>
-                            <TableCell align="right">Details&nbsp;</TableCell>
-                            <TableCell align="right">ID&nbsp;</TableCell>
-                            <TableCell align="right">Address&nbsp;</TableCell>
+                            <TableCell align="left">Apartment Name</TableCell>
+                            <TableCell align="left">ID&nbsp;</TableCell>
+                            <TableCell align="left">Address&nbsp;</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -44,7 +43,7 @@ const Bookings = () => {
                                     {row.name}
                                 </TableCell>
                                 <TableCell align="right">{row.apartmentName}</TableCell>
-                                <TableCell align="right">{row.details}</TableCell>
+
                                 <TableCell align="right">{row._id}</TableCell>
                                 <TableCell align="right">{row.address}</TableCell>
                             </TableRow>

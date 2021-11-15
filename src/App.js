@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Components/Home/Home/Home';
 import AllProducts from './Components/AllProducts/AllProducts';
 import Login from './Components/LOG IN/Login/Login';

@@ -105,8 +105,10 @@ const ProductModal = ({ openProduct, handleProductClose, product, setBookingSucc
                             id="outlined-size-small"
                             name="email"
                             onBlur={handleOnBlur}
-                            defaultValue="Email"
+                            placeholder="Email"
+                            defaultValue={user.email}
                             size="small"
+                            required
                         />
 
                         <TextField
@@ -114,8 +116,8 @@ const ProductModal = ({ openProduct, handleProductClose, product, setBookingSucc
                             id="outlined-size-small"
                             name="phone"
                             onBlur={handleOnBlur}
-                            defaultValue="+880"
                             placeholder="Phone Number"
+                            required
                             size="small"
                         />
 

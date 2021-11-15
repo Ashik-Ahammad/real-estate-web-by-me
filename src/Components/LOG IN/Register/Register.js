@@ -23,13 +23,14 @@ const Register = () => {
 
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
+        console.log(newLoginData)
         setLoginData(newLoginData);
     }
 
     const handleLoginSubmit = e => {
         if (loginData.password !== loginData.password2) {
-            alert('Your password did not match!!');
-            return;
+            alert('Your password did not match');
+            return
         }
         registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault();
@@ -52,6 +53,7 @@ const Register = () => {
                             name="name"
                             onBlur={handleOnBlur}
                             variant="standard" />
+
                         <TextField
                             sx={{ width: '62%', m: 1 }}
 
@@ -76,7 +78,6 @@ const Register = () => {
                             name="password2"
                             onBlur={handleOnBlur}
                             variant="standard" />
-
 
                         <Button sx={{ width: '62%', m: 1 }} type="submit" variant="contained">
                             SIGN UP

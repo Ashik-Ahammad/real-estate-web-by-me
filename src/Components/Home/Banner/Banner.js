@@ -10,7 +10,7 @@ const Banner = () => {
             <Grid item sx={{ mt: 1 }} xs={12} md={6}>
                 <div>
                     <h1 >
-                        <i class="fas fa-home home"></i>
+                        <i style={{ color: '#212121' }} class="fas fa-home home"></i>
                         <span>U</span>
                         <span>N</span>
                         <span>I</span>
@@ -33,7 +33,7 @@ const Banner = () => {
             <Grid item xs={12} md={6}>
                 <img style={{ width: '90%' }} src={banner} alt="Banner" />
                 <NavLink style={{ textDecoration: 'none' }} to="/allProducts">
-                    <Button color="secondary" >EXPLORE MORE</Button>
+                    <Button style={{ color: '#212121' }} color="secondary" >EXPLORE MORE</Button>
                 </NavLink>
             </Grid>
         </Grid>
