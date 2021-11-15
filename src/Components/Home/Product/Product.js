@@ -38,8 +38,6 @@ const Product = ({ product, setBookingSuccess }) => {
                             {details}
                         </Typography>
                         <Button style={{ background: '#212121' }} onClick={handleProductOpen} sx={{ mt: 2 }} variant="contained">View for Details</Button>
-
-
                     </CardContent>
 
                 </Card>

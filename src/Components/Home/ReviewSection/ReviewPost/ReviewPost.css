@@ -1,0 +1,28 @@
+.addReview form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightslategray;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.addReview form input,textarea{
+  width: 40%;
+  margin-bottom: 10px;
+  background-color: lightskyblue;
+}
+
+.reviewBtn{
+  background-color: brown;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 20px;
+}
+
+.reviewBtn:hover{
+  background-color: #212121;
+  color: white;
+}

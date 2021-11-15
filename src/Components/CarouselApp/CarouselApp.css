@@ -1,0 +1,15 @@
+.img-style{
+    height: 500px;
+}
+
+.gallery{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:x-large;
+    color:teal;
+}
+
+.gallery:hover{
+    transform: scale(1.5);
+    transition: 3s ease-in-out;
+    color: brown;
+}
