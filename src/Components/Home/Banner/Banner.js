@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const Banner = () => {
     return (
         <Grid container spacing={2} sx={{ mt: 5, py: 10 }}>
-            <Grid item sx={{ mt: 1 }} xs={12} md={6}>
+            <Grid sx={{ mt: 1 }} size={{ xs: 12, md: 6 }}>
                 <div>
                     <h1 >
                         <i style={{ color: '#212121' }} class="fas fa-home home"></i>
@@ -30,7 +30,7 @@ const Banner = () => {
                 </div>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
                 <img style={{ width: '90%' }} src={banner} alt="Banner" />
                 <NavLink style={{ textDecoration: 'none' }} to="/allProducts">
                     <Button style={{ color: '#212121' }} color="secondary" >EXPLORE MORE</Button>

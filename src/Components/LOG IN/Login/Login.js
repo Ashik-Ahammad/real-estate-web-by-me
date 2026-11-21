@@ -41,7 +41,7 @@ const Login = () => {
     return (
         <Container style={loginBg}>
             <Grid container spacing={2} sx={{ py: 25 }}>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="body1" color="navy" gutterBottom>
                         <i class="fas fa-user-circle"></i>  Login
                     </Typography>
@@ -90,7 +90,7 @@ const Login = () => {
                     {authError && <Alert severity="error">{authError}</Alert>
                     }
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     <i class="fas fa-address-card banner-login"></i>
                 </Grid>
             </Grid>

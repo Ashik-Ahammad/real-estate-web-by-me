@@ -68,9 +68,11 @@ const AllProductModal = ({ openAllProduct, handleAllProductClose, allProduct, se
             open={openAllProduct}
             onClose={handleAllProductClose}
             closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-                timeout: 500,
+            slots={{ backdrop: Backdrop }}
+            slotProps={{
+                backdrop: {
+                    timeout: 500,
+                },
             }}
         >
             <Fade in={openAllProduct}>
@@ -124,8 +126,10 @@ const AllProductModal = ({ openAllProduct, handleAllProductClose, allProduct, se
                             id="outlined-read-only-input"
                             name="price"
                             defaultValue={price}
-                            InputProps={{
-                                readOnly: true,
+                            slotProps={{
+                                input: {
+                                    readOnly: true,
+                                },
                             }}
 
                         />

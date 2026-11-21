@@ -39,7 +39,7 @@ const Register = () => {
     return (
         <Container style={loginBg}>
             <Grid container sx={{ py: 25 }} spacing={2}>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     <img src={registerImg}
                         width="100px" alt="" />
                     <Typography variant="body1" color="red" gutterBottom>
@@ -94,7 +94,7 @@ const Register = () => {
                     {authError && <Alert severity="error">{authError}</Alert>}
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     <i class="fas fa-address-card banner-login"></i>
                 </Grid>
             </Grid>

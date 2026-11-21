@@ -70,9 +70,11 @@ const ProductModal = ({ openProduct, handleProductClose, product, setBookingSucc
             open={openProduct}
             onClose={handleProductClose}
             closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-                timeout: 500,
+            slots={{ backdrop: Backdrop }}
+            slotProps={{
+                backdrop: {
+                    timeout: 500,
+                },
             }}
         >
             <Fade in={openProduct} >
@@ -126,8 +128,10 @@ const ProductModal = ({ openProduct, handleProductClose, product, setBookingSucc
                             id="outlined-read-only-input"
                             name="price"
                             defaultValue={price}
-                            InputProps={{
-                                readOnly: true,
+                            slotProps={{
+                                input: {
+                                    readOnly: true,
+                                },
                             }}
 
                         />

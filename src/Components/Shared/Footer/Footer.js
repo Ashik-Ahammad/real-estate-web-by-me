@@ -36,7 +36,7 @@ const Footer = () => {
             <footer class="footer-style" >
                 <Grid container spacing={3} style={footerBg}>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography>
                             IT'S EASY TO FIND US
                             <p class="footer-para">Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water</p>
@@ -57,7 +57,7 @@ const Footer = () => {
                             </div>
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={6} >
+                    <Grid size={{ xs: 12, md: 6 }} >
                         <Typography style={{ marginBottom: '5PX', color: 'white' }}>
                             FEEDBACK
                         </Typography>
@@ -109,7 +109,7 @@ const Footer = () => {
                                 SEND
                             </Button>
                         </form>
-                        <Grid item xs>
+                        <Grid size="grow">
                             <div class="icons">
                                 <a href="https://www.facebook.com/"
                                     target="_blank" rel="noreferrer"
